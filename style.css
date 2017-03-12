@@ -1,0 +1,41 @@
+/*section */
+
+#mainHeading{
+  color: orange;
+}
+
+
+
+
+
+/*section */
+.titlediv{
+  background-color: #A58;
+  width: 60%;
+  height: 75px;
+  margin: 0 auto;
+}
+h2{
+  text-align: center;
+  font-size: 40px;
+  color: #FFF;
+}
+
+
+
+/*section *****************************************************************/
+.maindiv{
+  border: #AA5588 2px solid;
+  width: 500px;
+  margin: 0 auto;
+}
+.top{
+  background-color: #AAA;
+  width: 100%;
+  height: 100px;
+}
+.bottom{
+  background-color: #DDD;
+  width: 100%;
+  height: 400px;
+}
