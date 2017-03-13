@@ -8,7 +8,7 @@ var selectid = document.getElementById("selectid");
 var symbolChosen = selectid.options[selectid.selectedIndex].value;
 
 console.log(symbolChosen + " is symbol chosen");
-console.log(heightElem + " is height element")
+console.log(heightElem + " is height element");
 
 // set a handler function for the form's submission event
 // heightElem.on = function(event) {
@@ -88,12 +88,13 @@ console.log(heightElem + " is height element")
 //  *
 //  * Renders, in the HTML document, a Mario pyramid of the specified height
 //  */
-function drawPyramid(heightElem) {
+function drawPyramid(heightElem, symbolChosen) {
 
     // first, clear the old content
     document.getElementById("bottom").innerHTML = "";
 
     // for each row....
+    symbolChosen = selectid.options[selectid.selectedIndex].value;
     for (var row = 0; row < heightElem; row++) {
 
         // figure out number of bricks and spaces
