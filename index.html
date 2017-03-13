@@ -16,28 +16,26 @@
     </div>
     <div class="maindiv">
 
-      <div class="top">
+      <div id="top">
 
         <p id="brickSymbol">Brick Symbol:</p>
-        <select name="symbols" form="">
-          <option value="hash">#</option>
-          <option value="at">@</option>
+
+        <select name="symbols" onchange="drawPyramid(this.value)" id="selectid">
+          <option value="#">#</option>
+          <option value="@">@</option>
           <option value="X">X</option>
-          <option value="dollar">$</option>
+          <option value="$">$</option>
         </select>
+
         <p id="howHigh">How High?</p>
-        <input type="range" id="myRange" value="23">
+
+        <input type="range" id="myRange" min="1" max="11" onchange="drawPyramid(this.value)">
         <p id="rangeNumber">896987676</p>
 
       </div>
-      <div class="bottom">
 
+      <div id="bottom">
       </div>
-
-
-
-
-
 
     </div>
 
