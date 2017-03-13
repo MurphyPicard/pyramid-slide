@@ -92,9 +92,13 @@ function drawPyramid(heightElem, symbolChosen) {
 
     // first, clear the old content
     document.getElementById("bottom").innerHTML = "";
+    document.getElementById("rangeNumber").innerHTML = heightElem;
 
     // for each row....
     symbolChosen = selectid.options[selectid.selectedIndex].value;
+
+
+
     for (var row = 0; row < heightElem; row++) {
 
         // figure out number of bricks and spaces
@@ -103,17 +107,34 @@ function drawPyramid(heightElem, symbolChosen) {
 
         // build up a string for this row
         var rowStr = "";
-        for (var i = 0; i < numSpaces; i++) {
-            var spaceChar = "&nbsp"; // this is the HTML encoding for a space " "
-            rowStr += spaceChar;
-        }
-        for (var i = 0; i < numBricks; i++) {
-            rowStr += symbolChosen;
-        }
-
-        // make a <p> element for this row, and insert it into the #pyramid container
         rowElem = document.createElement("p");
+        rowElem.className = 'pClass';
         rowElem.innerHTML = rowStr;
         document.getElementById("bottom").appendChild(rowElem);
+
+        for (var i = 0; i < numSpaces; i++) {
+          span = document.createElement("span");
+          span.className = "spanClass";
+          span.innerHTML = "&nbsp";
+          var spaceChar = span.innerHTML; // this is the HTML encoding for a space " "
+          rowStr += spaceChar;
+          document.querySelectorAll(".pClass")[row].appendChild(span);
+          // document.querySelectorAll('.titanic')[1]
+
+        }
+
+        for (var i = 0; i < numBricks; i++) {
+          span = document.createElement("span");
+          span.className = "spanClass";
+          span.innerHTML = symbolChosen;
+          rowStr += span;
+          document.querySelectorAll(".pClass")[row].appendChild(span);
+
+        }
+        // make a <p> element for this row, and insert it into the #pyramid container
+        // rowElem = document.createElement("p");
+        // rowElem.className = 'pClass';
+        // rowElem.innerHTML = rowStr;
+        // document.getElementById("bottom").appendChild(rowElem);
     }
 }
