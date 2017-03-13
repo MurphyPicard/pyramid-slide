@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Pyramid Slide Ara</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
-  </head>
   <body>
 
 
@@ -21,20 +20,35 @@
 
 
       <div id="top">
+        <!-- <p id="brickSymbol" class="col-sm-2"></p> -->
+        <label>
+          <span class="bricksymbol">
+          Brick Symbol:
 
-        <p id="brickSymbol">Brick Symbol:</p>
+          <select name="symbols" onchange="drawPyramid(this.value)" id="selectid">
+            <option value="#">#</option>
+            <option value="@">@</option>
+            <option value="x">x</option>
+            <option value="$">$</option>
+          </select>
+          </span>
+        </label>
 
-        <select name="symbols" onchange="drawPyramid(this.value)" id="selectid">
-          <option value="#">#</option>
-          <option value="@">@</option>
-          <option value="x">x</option>
-          <option value="$">$</option>
-        </select>
+        <label>
 
-        <p id="howHigh">How High?</p>
+          <span class="high">
+            How High?
+          </span>
 
-        <input type="range" id="myRange" min="1" max="11" onchange="drawPyramid(this.value)">
-        <p id="rangeNumber"></p>
+          <span>
+            <input type="range" id="myRange" min="1" max="20" onchange="drawPyramid(this.value)">
+          </span>
+
+        </label>
+
+          <span id="rangeNumber">
+          </span>
+
       </div>
 
 

@@ -1,22 +1,19 @@
 /*section */
-
+body{
+  text-align: center;
+}
 #mainHeading{
   color: orange;
 }
-
-
-
-
-
-/*section */
+/*section ******************************************/
 .titlediv{
   background-color: #A58;
   border: #A58 2px solid;
-  width: 70%;
+  width: 60%;
   height: 75px;
   margin: 0 auto;
 }
-h2{
+.titlediv h2{
   text-align: center;
   font-size: 40px;
   color: #FFF;
@@ -27,28 +24,38 @@ h2{
 /*section *****************************************************************/
 .maindiv{
   border: #A58 2px solid;
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
+  margin-top: 5px;
 }
 #top{
   background-color: #AAA;
   width: 100%;
   height: 100px;
 }
+.bricksymbol{
+  padding: 20px;
+}
 #bottom{
   background-color: #DDD;
   width: 100%;
-  height: 400px;
   margin: auto;
+  line-height: 0;
+  padding-top: 20px;
 }
 .pClass{
-  background-color: lightgreen;
+  /*background-color: lightgreen;*/
   width: auto;
-  margin: 10px auto;
+  margin: 0px auto;
+  text-align: center;
 }
 .spanClass{
   display: inline-block;
-  width: 16px;
-  background-color: white;
-  border: 1px black solid;
+  width: 24px;
+  height: 24px;
+  /*background-color: white;*/
+  /*border: 1px black solid;*/
+  font-size: 24px;
+  color: #A58;
+  line-height: 0;
 }
